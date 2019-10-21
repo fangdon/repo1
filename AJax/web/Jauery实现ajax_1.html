@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        function fun(){
+            $.ajax({
+                url:"ajaxServlet",
+                data:{"username":"jiajia","password":"123"},
+                type:"POST",
+                success:function (data) {
+                    alert(data);
+                },
+                error:function () {
+                    alert("出错了！")
+                },
+                dataType:"text"
+            });
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="发送请求" onclick="fun();">
+    <input>
+</body>
+</html>
